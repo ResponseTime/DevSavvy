@@ -1,13 +1,12 @@
 .d{
     display: flex;
-    background-color: rgb(68, 68, 175);
-    height: 90vh;
+    height: 100vh;
     width: 100%;
 }
 .d1{
     display: flex;
     background-color: rgb(115, 228, 23);
-    height: 90vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -19,6 +18,55 @@
     background-color: red;
 }
 .navbar{
-    background-color:red;
-    height: 50px
+    display: flex;
+    height: 10px;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+}
+navbar>a,a {
+    text-decoration: none;
+    margin:0px 10px;
+    z-index: 11;
+}
+.App-header {
+    background-color: #282c34;
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-bottom: 5vh;
+    text-align: center;
+    padding: 12px;
+}
+.App{
+    margin-top:20px
+}
+.DraftEditor-root{
+    height: 700px !important;
+}
+
+.wrapper-class {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin:auto;
+    width: 1000px;
+}
+.editor-class {
+    background-color:lightgray;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+.toolbar-class {
+    border: 1px solid #ccc;
+}
+.cen{
+    width: 100%;
+    margin: auto;
+    height: 100%;
 }

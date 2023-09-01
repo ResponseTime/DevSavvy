@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import MyEditor from "./MyEditor";
 export default function Demo() {
   return (
     <motion.div
@@ -16,8 +17,8 @@ export default function Demo() {
         opacity: 1,
       }}
     >
-      <div>
-        <h1>hello d</h1>
+      <div className="cen">
+        <MyEditor />
       </div>
     </motion.div>
   );
