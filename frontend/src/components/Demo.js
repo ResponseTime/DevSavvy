@@ -4,7 +4,7 @@ export default function Demo() {
   return (
     <motion.div
       className="d"
-      initial={{ transform: "translateX(-1000px)" }}
+      initial={{ transform: "translateX(-3000px)" }}
       animate={{ transform: "translateX(0px)" }}
       exit={{ transform: "translateX(0px)", transition: { duration: 0.1 } }}
     >
