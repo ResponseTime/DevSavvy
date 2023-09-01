@@ -1,14 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-  Link,
-} from "react-router-dom";
-import Demo from "./components/Demo";
-import Demo1 from "./components/Demo1";
+import { BrowserRouter as Router } from "react-router-dom";
 import Animate from "./components/Animate";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -18,8 +9,8 @@ function App() {
       <Router>
         <Navbar />
         <Animate />
-        <Footer />
       </Router>
+      <Footer />
     </>
   );
 }
