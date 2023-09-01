@@ -4,9 +4,9 @@ export default function Demo() {
   return (
     <motion.div
       className="d"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      initial={{ transform: "translateX(-1000px)" }}
+      animate={{ transform: "translateX(0px)" }}
+      exit={{ transform: "translateX(0px)", transition: { duration: 0.1 } }}
     >
       <div>
         <h1>hello d</h1>

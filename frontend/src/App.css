@@ -1,10 +1,18 @@
 .d{
     background-color: rgb(68, 68, 175);
-    height: 100vh;
+    height: 90vh;
 
 }
 .d1{
     background-color: rgb(115, 228, 23);
-    height: 100vh;
+    height: 90vh;
    
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 50px;
+    background-color: red;
 }
