@@ -45,8 +45,10 @@ navbar>a,a {
     padding: 12px;
 }
 .App{
-    margin-top:20px
+    margin:10px 10px;
+    float:left;
 }
+
 .DraftEditor-root{
     height: 700px !important;
 }
@@ -57,12 +59,28 @@ navbar>a,a {
     margin:auto;
     width: 1000px;
 }
+.wrapper-class1 {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin:auto;
+    width: 1000px;
+}
 .editor-class {
     background-color:lightgray;
     padding: 1rem;
     border: 1px solid #ccc;
 }
+.editor-class1 {
+    background-color:lightgray;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    pointer-events: none;
+}
 .toolbar-class {
+    border: 1px solid #ccc;
+}
+.toolbar-class1 {
+    display: none !important;
     border: 1px solid #ccc;
 }
 .cen{

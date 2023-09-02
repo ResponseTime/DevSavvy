@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import MyEditor from "./MyEditor";
-export default function Demo() {
+import Blog from "./Blog";
+export default function Demo(props) {
   return (
     <motion.div
       className="d"
@@ -18,7 +19,7 @@ export default function Demo() {
       }}
     >
       <div className="cen">
-        <MyEditor />
+        <MyEditor set={props.set} />
       </div>
     </motion.div>
   );

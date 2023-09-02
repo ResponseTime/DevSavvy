@@ -3,14 +3,21 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Demo from "./Demo";
 import Demo1 from "./Demo1";
 import { AnimatePresence } from "framer-motion";
+import Posts from "./Posts";
+import Login from "./Login";
 
-export default function Animate() {
+export default function Animate(props) {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Demo />} />
-        <Route path="/demo1" element={<Demo1 />} />
+        <Route path="/" element={<Posts user={props.user} />} />
+        <Route path="/login" element={<Login setUser={props.setUser} />} />
+        <Route path="/mposts" element={<Posts user={props.user} />} />
+        <Route
+          path="/apost"
+          element={<Demo blog={props.blog} set={props.set} />}
+        />
       </Routes>
     </AnimatePresence>
   );

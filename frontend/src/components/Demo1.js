@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-export default function Demo1() {
+import Blog from "./Blog";
+export default function Demo1(props) {
   return (
     <motion.div
       className="d1"
@@ -17,9 +18,7 @@ export default function Demo1() {
         opacity: 1,
       }}
     >
-      <div>
-        <h1>hello d1</h1>
-      </div>
+      <Blog blog={props.blog} />
     </motion.div>
   );
 }
