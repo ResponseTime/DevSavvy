@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { EditorState } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { ContentState, convertToRaw } from "draft-js";
 
 export default function MyEditor(props) {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+    return () => {
+      setIsMounted(false);
+    };
+  }, []);
   const _contentState = ContentState.createFromText("Sample content state");
   const raw = convertToRaw(_contentState);
   const [contentState, setContentState] = useState(raw);
@@ -13,6 +20,7 @@ export default function MyEditor(props) {
   };
   return (
     <div className="App">
+      isMounted &&
       <Editor
         defaultContentState={contentState}
         onContentStateChange={setContentState}
@@ -20,7 +28,7 @@ export default function MyEditor(props) {
         editorClassName="editor-class"
         toolbarClassName="toolbar-class"
       />
-      <button onClick={sendInp}>clcik</button>
+      <button onClick={sendInp}>click</button>
     </div>
   );
 }
