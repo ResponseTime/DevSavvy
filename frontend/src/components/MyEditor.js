@@ -19,16 +19,17 @@ export default function MyEditor(props) {
     props.set(contentState);
   };
   return (
-    <div className="App">
-      isMounted &&
-      <Editor
-        defaultContentState={contentState}
-        onContentStateChange={setContentState}
-        wrapperClassName="wrapper-class"
-        editorClassName="editor-class"
-        toolbarClassName="toolbar-class"
-      />
-      <button onClick={sendInp}>click</button>
-    </div>
+    isMounted && (
+      <div className="App">
+        <Editor
+          defaultContentState={contentState}
+          onContentStateChange={setContentState}
+          wrapperClassName="wrapper-class"
+          editorClassName="editor-class"
+          toolbarClassName="toolbar-class"
+        />
+        <button onClick={sendInp}>click</button>
+      </div>
+    )
   );
 }

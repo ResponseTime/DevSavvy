@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, useNavigate } from "react-router-dom";
+import { Link, BrowserRouter as Router, useNavigate } from "react-router-dom";
 import Animate from "./components/Animate";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -19,7 +19,6 @@ function App() {
     <>
       <Router>
         <Navbar />
-        {!user ? <Login /> : null}
         <Animate blog={blog} set={setBlog} user={user} setUser={setUser} />
       </Router>
     </>

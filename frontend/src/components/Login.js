@@ -25,9 +25,11 @@ export default function Login(props) {
   };
   return (
     <>
-      <input type="text" value={user} onChange={handle} />
-      <input type="password" value={pass} onChange={handle1} />
-      <input type="submit" value="Submit" onClick={log} />
+      <div className="log">
+        <input type="text" value={user} onChange={handle} />
+        <input type="password" value={pass} onChange={handle1} />
+        <input type="submit" value="Submit" onClick={log} />
+      </div>
     </>
   );
 }
