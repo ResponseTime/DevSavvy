@@ -7,8 +7,9 @@ export default function Navbar() {
         <Link to="/">All posts</Link>
         <Link to="/mposts">My posts</Link>
         <Link to="/apost">Add post</Link>
+        <Link to="/blog">read blog</Link>
       </div>
-      <Link to="/login" style={{ float: "right" }}>
+      <Link to="/login" style={{ right: 0, zIndex: "1", position: "absolute" }}>
         Login/Signup
       </Link>
     </>

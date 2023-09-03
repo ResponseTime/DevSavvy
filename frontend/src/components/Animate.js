@@ -5,6 +5,7 @@ import Demo1 from "./Demo1";
 import { AnimatePresence } from "framer-motion";
 import Posts from "./Posts";
 import Login from "./Login";
+import Blog from "./Blog";
 
 export default function Animate(props) {
   const location = useLocation();
@@ -14,10 +15,8 @@ export default function Animate(props) {
         <Route path="/" element={<Posts user={props.user} />} />
         <Route path="/login" element={<Login setUser={props.setUser} />} />
         <Route path="/mposts" element={<Posts user={props.user} />} />
-        <Route
-          path="/apost"
-          element={<Demo blog={props.blog} set={props.set} />}
-        />
+        <Route path="/blog" element={<Demo1 blog={props.blog} />} />
+        <Route path="/apost" element={<Demo set={props.set} />} />
       </Routes>
     </AnimatePresence>
   );
