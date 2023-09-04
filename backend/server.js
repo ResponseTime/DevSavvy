@@ -2,7 +2,9 @@ require("dotenv").config();
 const { MongoClient } = require("mongodb");
 const uri = process.env.URI;
 const client = new MongoClient(uri);
-const conn_ = await client.connect();
-const db = conn_.db("techlogin");
+client.connect((err) => {
+  if (err) throw err;
+});
+const db = client.db("techblog");
 
 module.exports = db;
